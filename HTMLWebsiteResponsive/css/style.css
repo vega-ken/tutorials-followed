@@ -1,0 +1,239 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5; /* line-height without units will change when font-size changes */
+  /*  font : 15px/1.5/ Arial,Helvetica, sans-serif; */ /* same but in one line */
+  margin: 0px;
+  padding: 0px;
+  background-color: #f4f4f4;
+}
+
+/* global styles */
+
+.container{
+  width: 90%; /* percentage values instead of pixels for responsiveness */
+    /* will take just 90% width of his parent element */
+  margin:auto; /* makes the content of container centered because margin on every side will be equal */
+  overflow: hidden; /* hides anything that goes further that 90% of width (e.g. long words)*/
+}
+
+.button_1{
+  color: #fff;
+  background: #e8491d;
+  border: none;
+  height: 37px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dark{
+  padding: 15px;
+  background: #35424a;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+header{
+  background: #35424a;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px; /* the header now will never be too small */
+  border-bottom: #e8481d 3px solid;
+}
+
+header a{ /* for texts on links that live in header */
+  color: #fff;
+  text-decoration: none; /* takes away the underline of links */
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul{ /* for the list that lives in header */
+  margin: 0;
+  padding: 0;
+}
+
+header li{ /* just for the elements of the list that live in the header */
+  float:left;
+  display:inline; /* display elements horizontally */
+  padding: 0 20px 0 20px; /* making space between elements */
+}
+
+header #branding{
+  float:left; /* for bigger screens, brand goes to the left part */
+}
+
+header #branding h1{
+  margin : 0;
+}
+
+header nav{
+  float:right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a{ /* to make certain elements stand out */
+  color: #e8491d;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* Showcase */
+
+#showcase{
+  min-height: 400px; /* the showcase now will never be too small | responsiveness */
+  background: url('../img/showcase.jpg') no-repeat 0 -400px; /* don't repeat if is too small for the parent element | don't move on X axis | move 400px down in Y axis */
+  text-align: center;
+  color: #fff; /* all text inside #showcase element will be white */
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px; /* adjusting space between h1 and p */
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+/* newsletter */
+
+#newsletter{
+  padding: 15px;
+  color: #fff;
+  background: #35424a;
+}
+
+#newsletter input[type="email"]{ /* just for the inputs that are email type that live in element with id of newsletter (there is just one actually) */
+  /* it will just afect to the input box */
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+  /* styles to the associated button are applied with global styles */
+}
+
+  /* moving elements to one end | this will be only valid for large screens, then media queries will erase floats */
+
+#newsletter h1{
+  float: left;
+}
+
+#newsletter form{
+  float: right;
+  margin-top: 15px;
+}
+
+/* boxes */
+
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float: left; /* arrange all boxes to the left, without this the boxes will just be displayed vertically */
+  text-align: center;
+  width: 30%; /* making boxes with 30% of the parent element ensures that the three of them will be displayed horizontally in one row */
+  padding:10px;
+}
+
+#boxes .box img{ /* images that live inside elements that have class of box that are contained in the element with id of boxes */
+  width: 90px; /* changing width changes height also (like images in Word) */
+}
+
+/* sidebar */
+
+aside#sidebar { /* just for the aside element that has the id of #sidebar */
+  /* IMPORTANT : "aside" and "#sidebar" have to be together (without space in between) for make this style work */
+    /* if you add a space in between ("aside #sidebar"), it will try to apply this styles to an element that is inside the aside element and has the id of #sidebar */
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width: 90%;
+  padding: 5px;
+  /* remember: padding is space between the element and the border, margin is space outside the border */
+}
+
+article#main-col{
+  float: left;
+  width: 65%; /* with 65% and 30% of the aside you make a space between those elements  */
+  text-align: justify;
+}
+
+ul#services li{ /* these styles apply to 'li' elements that live inside a 'ul' that has the id of #services */
+  list-style: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  background-color:  #e8491d;
+}
+
+/* Media queries | for responsiveness in smaller screens */
+
+ @media(max-width: 768px)
+ {
+   /* while screen' width is not greater than 768px, apply these styles*/
+     /* the idea for smaller screens is to remove floats so elements get displayed vertically */
+   /* mientras la pantalla no haya pasado de 768px en width, aplicar estos estilos */
+     /* la idea para las pantallas pequñas es remover los floats */
+   header #branding,
+   header nav,
+   header nav li,
+   #newsletter h1,
+   #newsletter form,
+   #boxes .box,
+   article#main-col,
+   aside#sidebar{
+     float: none;
+     text-align: center;
+     width: 100%;
+     /* it will remove float styles and center them */
+   }
+
+   header {
+     padding-bottom: 20px;
+   }
+
+  #showcase h1{
+    /* adjusting for smaller screens (it was 100px on larger screens) */
+    margin-top: 40px;
+  }
+
+  #newsletter button, .quote button{
+    display: block; /* ? */
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"]{
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  article#main-col ul{
+    padding: 0;
+  }
+
+  section#boxes .box{
+    padding: 0px;
+  }
+
+ }
