@@ -1,0 +1,92 @@
+*{
+  /* overwrite deafult values of margin and padding of elements on page (h1 for example) */
+  margin : 0;
+  padding : 0;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  color: #000000; /* will affect to the color of the text */
+  line-height: 1.6;
+}
+
+#showcase{
+  background-image: url('../img/space.jpg');
+  /*height: 100px;*/ /* this won't work, it's a fixed value and screens size changes on different devices */
+  /*height: 100%;*/ /* won't also work, it's just saying that it cover 100% of his parent element */
+
+  background-size: cover; /* the image will always cover the entire container, even if it has to stretch */
+  background-position: center;
+  height: 100vh; /* 100% of the viewport height, meaning that this background will cover all height of every screen */
+
+  /* flexbox to align the content easily */
+  display: flex; /* allow flexbox properties */
+  flex-direction: column; /* arrange elements vertically (flexbox by default arranges elements horizontally) */
+  justify-content: center; /* push content to the middle (vertically) */
+  align-items: center;  /* push content to the center horizontally */
+
+  text-align: center; /* for smaller screens when there is more than one line of text, they will be centered */
+
+  padding: 0 20px; /* 0 padding for top and bottom, 20px for left and right */
+    /* to avoid the text to be too near edges */
+
+}
+
+#showcase h1{
+  font-size: 50px;
+  line-height: 1.2; /* smaller space between lines in header */
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+#showcase .button{
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  border: #92aedd 1px solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#showcase .button:hover{
+  background: #387eed;
+  color: #fff; /* color of the text of the button */
+}
+
+#section-a{
+  padding :20px;
+  background: #387eed;
+  color: #fff;
+  text-align: justify;
+}
+
+#section-b{
+  padding :20px;
+  background: #f4f4f4;
+  text-align: justify;
+}
+
+#section-c{
+  /* we want the three divs aligned horizontally */
+  /* first, we convert this into flex items */
+  display: flex; /* it will display them horizontally by default */
+}
+
+#section-c div{
+  padding: 15px;
+  text-align: center;
+}
+
+#section-c .box1, #section-c .box3{
+  background: #92aedd;
+  color: #fff;
+}
+
+#section-c .box2{
+  background: #f9f9f9;
+}
