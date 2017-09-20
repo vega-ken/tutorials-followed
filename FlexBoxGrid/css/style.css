@@ -1,0 +1,249 @@
+body{
+  /* casi siempre se empieza dando estilos aqui*/
+  font-family: 'Arial', helvetica;
+  font-size: 17px;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: auto;
+}
+
+img{
+  width: 100%; /* seteando imagenes a un 100% del tamaño de width de su contenedor  */
+  /* con esto, las imagenes que sean mas grandes que el contenedor en el que estan, se ajustaran al tamaño que se les de en width */
+}
+
+/* Common classes */
+
+.primary-text{ /* el texto de otro color */
+  color: #56a79a;
+
+}
+
+.primary-background{
+  background: #56a79a;
+}
+
+.current{
+
+}
+
+#page{
+  margin-bottom: 40px; /* se refiere a los ids de las páginas about, services y contact */
+}
+
+/* HEADER */
+
+#main-header{
+  border-bottom: 1px solid #56a79a; /* poner una linea abajo del header */
+}
+
+/* NAVBAR */
+
+#main-navbar{
+  text-transform: uppercase; /* convertir todas las lineas de navegacion a mayusculas */
+}
+
+#main-navbar li{
+  display: inline; /* alinear los elementos li horizontalmente */
+  padding-right: 20px; /* agregar padding derecho de 20px */
+  list-style: none;/* quitar los puntos de las listas */
+}
+
+#main-navbar a{
+  text-decoration: none; /* quitar el subrayado de los links por ejemplo */
+  color: #888;
+}
+
+#main-navbar li.current a, #main-navbar a:hover{
+  /* este estilo se aplicara a: */
+    /* elementos 'a' que esten en 'li' que tengan la clase current que esten dentro del elemento con id 'main-navbar' */
+    /* hover de los elementos 'a'(links) que estén dentro del elemento que tenga por id #main-navbar  */
+  color: #56a79a;
+  border-bottom: 3px solid #56a79a;
+  padding-bottom: 3px;
+}
+
+/* SHOWCASE */
+
+#showcase{
+  background: url('../images/showcase.jpg') no-repeat center center;
+  border-bottom: 1px solid #56a79a;
+  margin-bottom: 30px; /* agrega margen fuera de la imagen (empuja core-features hacia abajo ya que también se le quita el margen a ese h2) */
+}
+
+#showcase .row{
+  height: 500px;/*30em;*/ /* como ya se tenia que el contenido del row sea centrado, solo se hacia mas grande el row en altura para mostrar mas la imagen */
+}
+
+#showcase h1{
+  font-size: 50px;
+  margin: 0; /* por default los h1 y p y demás tienen margen, así que se lo quita */
+  padding-bottom: 20px;
+}
+
+#showcase p{
+  color: #ccc;
+  margin: 0;
+}
+
+#showcase .showcase-content{ /* para solo referirse al div dentro de las columnas */
+  background: #333;
+  color: #fff;
+  border-radius: 90px;
+  padding: 40px;
+  opacity: 0.9;
+}
+
+/* FEATURES */
+#features h2{
+  font-size: 35px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#features p{
+  color: #888;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+#features .fa{ /* aplicar este estilo a todos los font awesome iconos en features*/
+  font-size: 35px; /* necesitan tener iconos mas grandes */
+  color: #56a79a;
+}
+
+/* INFO SECTION */
+
+#info{ /*  */
+  background: #333 url('../images/info-bg.jpg') no-repeat center center;
+  color: #fff;
+}
+
+#info h2{
+  font-size: 35px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#info ul{
+  /* en el tutorial, brad no quita el margen por defecto que tiene el ul */
+  list-style: none;
+  padding-left: 0; /* por defecto los ul tienen padding */
+}
+
+#info li{
+  line-height: 2em;
+  font-size: 20px;
+}
+
+
+/* COMPANY */
+
+#company{
+  background: #333;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+#company h4{
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#company ul{
+  padding: 0;
+  list-style: none;
+  line-height: 2em;
+}
+
+#company input[type="email"]{
+  padding: 7px; /* como es padding es espacio interno, hace "más grande" la caja de input */
+}
+
+#company button{
+  background: #555;
+  color: #fff;
+  padding: 10px;
+  border: 0; /* por default, los botones tienen borde */
+}
+
+/* FOOTER */
+
+#main-footer{
+  background : #56a79a;
+  color: #fff;
+}
+
+/* SERVICES PAGE */
+
+.services ul li{ 
+  list-style: none;
+  padding: 10px;
+}
+
+.services ul li:nth-child(odd){ /* listas impares */
+  background: #333;
+  color: #fff;
+}
+
+.services ul li:nth-child(even){ /* elementos de lista pares */
+  background: #56a79a;
+  color: #fff;
+}
+
+/* CONTACT */
+.contact form{
+  background: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.contact form input[type="text"], .contact form input[type="email"] {
+  width: 50%;
+  height: 30px;
+  margin-bottom: 10px;  /* recuerda que es espacio externo al objeto */
+}
+
+.contact form textarea{
+  width: 50%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.contact form button{
+  width: 50%;
+  padding: 10px 0;
+  border: 0;
+  background: #222;
+  color: #fff;
+}
+
+.contact form label{
+  text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:800px) {
+  /* todo estilo aqui solo se aplicara si el width es menor a 800px */
+  #showcase h1{
+    font-size: 27px; /* letras mas pequeñas para que entre todo */
+  }
+}
+
+@media (max-width:500px) {
+  /* todo estilo aqui solo se aplicara si el width es menor a 500px */
+  #showcase .showcase-content{
+    padding: 40px 10px; /* padding a extremos laterales menor para pantallas pequeñas */
+  }
+}
+
+
+
+
+
+/* - */
