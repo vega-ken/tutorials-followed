@@ -1,0 +1,28 @@
+gulp
+
+funciona con node
+
+tareas que realiza
+  ayuda a reducir el texto de tu codigo (quitar comentarios y espacios de más)
+  testing
+
+como funciona
+  node streams
+  pipeline - output de un elemento es el input del siguiente
+
+  *alternativa : grunt
+
+--
+gulp se instala para entornos de desarrollo y no en producción
+
+--
+la aplicacion de producción normalmente se queda en una carpeta llamada dist
+  puedes copiar todo el html con una tarea de gulp (y supongo que luego minificarlo)
+
+* se pueden optimizar las imagenes
+  gulp-imagemin
+
+* puedes optimizar todos los archivos js que tengas con gulp-uglify
+
+** todas las tareas las puedes realizar con
+  default - un arreglo de todas las tareas que quieres realziar
