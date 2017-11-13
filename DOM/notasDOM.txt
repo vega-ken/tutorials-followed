@@ -17,4 +17,5 @@ document
 console.dir(document);
   todos los atributos y métodos del documento padre
 
-  all lleva un html collection
+html collection
+nodeList
