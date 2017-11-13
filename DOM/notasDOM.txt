@@ -1,0 +1,20 @@
+document
+  root (<html>)
+    head
+      title
+      meta tags
+    body
+      h1
+        text
+      a
+        href
+        text
+      div
+        text
+
+----
+
+console.dir(document);
+  todos los atributos y métodos del documento padre
+
+  all lleva un html collection
