@@ -1,0 +1,34 @@
+ES6 = ES2015
+
+agrega clases
+
+mejoras para escalamiento y gran aplicaciones
+
+---
+
+transpilers :
+  es6 a es5
+
+---
+
+que es nuevo
+  let y const
+  classes e inheritance
+  template strings => ``
+  map, set, (data structures)
+  promises
+  arrow functions
+
+--
+
+* si vas a hacer una aplicación a nivel de producción debes usar un transpiler para evitar problemas de compatiblidad
+  para eso usas babeljs.io
+
+compatibilidad 
+  kangax github io / compat table / es6
+
+
+
+
+
+
