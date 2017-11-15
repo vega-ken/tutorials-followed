@@ -1,6 +1,6 @@
 ES6 = ES2015
 
-agrega clases
+agrega clases - trata de evitar el uso de typescript
 
 mejoras para escalamiento y gran aplicaciones
 
