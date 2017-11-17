@@ -1,4 +1,4 @@
-ES6 = ES2015
+﻿ES6 = ES2015
 
 agrega clases - trata de evitar el uso de typescript
 
@@ -12,7 +12,7 @@ transpilers :
 ---
 
 que es nuevo
-  let y const
+  let y const // minimize mutable state
   classes e inheritance
   template strings => ``
   map, set, (data structures)

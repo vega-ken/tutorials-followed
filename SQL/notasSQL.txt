@@ -1,0 +1,2 @@
+en las columnas van las propiedaes
+en las filas van los valores 
