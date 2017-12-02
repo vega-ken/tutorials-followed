@@ -1,0 +1,19 @@
+*{
+  para hacer que todos los browsers lo vean igual
+}
+
+1 clase
+nuevas propiedades vistas
+
+para todo elemento
+  box-sizing: border-box; /* new */
+
+para el header
+  background-size: cover; /* tratara de hacer fit  */
+  background-position: top; /* te permite cortar la imagen desde arriba, centro o abajo */
+
+  clip-path  /* para formar una poligono -- puedes sacar varios puntos a partir de esta pagina http://bennettfeely.com/clippy/ */
+
+<div class="logo-box">
+  <img src="img/logo-white.png" alt="Logo" class="logo">
+</div>
