@@ -17,3 +17,11 @@ para el header
 <div class="logo-box">
   <img src="img/logo-white.png" alt="Logo" class="logo">
 </div>
+
+2 clase
+
+position : absolute; -> cuando no se pnoe un relativo, se toma al padre
+  si es 50% de top y left seria movido desde arriba e izquierda 50% del elemento padre
+
+pero cuando pones transform : translate(-50%,-50%) se refiere a mover el elemento con respecto de si mismo
+  eso ayuda a centrarlo mas facilmente
