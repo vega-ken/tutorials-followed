@@ -2,26 +2,48 @@
   para hacer que todos los browsers lo vean igual
 }
 
-1 clase
-nuevas propiedades vistas
+1 clase - heading parte 1
 
-para todo elemento
-  box-sizing: border-box; /* new */
+  para todo elemento
+    box-sizing: border-box; /* new */
 
-para el header
-  background-size: cover; /* tratara de hacer fit  */
-  background-position: top; /* te permite cortar la imagen desde arriba, centro o abajo */
+  para el header
+    background-size: cover; /* tratara de hacer fit  */
+    background-position: top; /* te permite cortar la imagen desde arriba, centro o abajo */
 
-  clip-path  /* para formar una poligono -- puedes sacar varios puntos a partir de esta pagina http://bennettfeely.com/clippy/ */
+    clip-path  /* para formar una poligono -- puedes sacar varios puntos a partir de esta pagina http://bennettfeely.com/clippy/ */
 
-<div class="logo-box">
-  <img src="img/logo-white.png" alt="Logo" class="logo">
-</div>
+  <div class="logo-box">
+    <img src="img/logo-white.png" alt="Logo" class="logo">
+  </div>
 
-2 clase
+2 clase - heading parte 2
 
-position : absolute; -> cuando no se pnoe un relativo, se toma al padre
-  si es 50% de top y left seria movido desde arriba e izquierda 50% del elemento padre
+  position : absolute; -> cuando no se pnoe un relativo, se toma al padre
+    si es 50% de top y left seria movido desde arriba e izquierda 50% del elemento padre
 
-pero cuando pones transform : translate(-50%,-50%) se refiere a mover el elemento con respecto de si mismo
-  eso ayuda a centrarlo mas facilmente
+  pero cuando pones transform : translate(-50%,-50%) se refiere a mover el elemento con respecto de si mismo
+    eso ayuda a centrarlo mas facilmente
+
+3 clase - animaciones con el header
+
+  se crea un keyframe con un nombre y se le da porcentajes para indicar ciertas propiedades
+
+  luego con las propiedades 
+    animation-name
+    animation-duration
+
+    se agregan las propiedades definidas en la animación al elemento/s
+    así puedes agregar las animaciones a mas de un elemento y a mas de un selector (hovers, load pages ,etc)
+
+  se pueden agregar otras propiedades para la animacion como
+
+    animation-delay : 3s; 
+    animation-iteration-count: 3;
+    animation-timing-function : ease; /* ease in empieza rapido y luego va mas lento */
+
+
+  cuando haces animaciones con transform querras agregar esta propiedad a su contenedor
+    backface-visibility: hidden;
+
+    para evitar un movimiento minusculo pero notable al final de cada animacion. esta propiedad evita ese movimiento
