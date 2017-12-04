@@ -47,12 +47,14 @@ body{
   height: 35px;
 }
 
-/*  text box  - heading y boton*/
+/*  text box  - heading y boton - estaran centrados*/
 .text-box{
   position: absolute;
   top : 40%;
   left : 50%;
   transform: translate(-40%, -50%);
+
+  text-align: center; /* centrar el elemento inline (el boton) */
 }
 
 /* heading principal */
@@ -62,6 +64,7 @@ body{
   text-transform: uppercase;
 
   backface-visibility: hidden; /* fix para el movimiento final de la animación */
+  margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -126,6 +129,31 @@ body{
   }
 }
 
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none; /* quita el subrayado */
+
+  padding : 15px 40px;
+  display: inline-block; /* si fuera solo block tomaria todo el espacio disponible en width (como un div) */
+
+  border-radius: 100px; /* con un valor alto te aseguras que tiene el maximo radio que pueda tener */
+  transition : all .2s; /* habilita las animaciones hechas con transform */
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow : 0 10px 20px rgba(0,0,0,0.2); /* offsetX offsetY blur color */
+}
+
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow : 0 5px 10px rgba(0,0,0,0.2); /* da un efecto de reduccion de sombra cuando se presiona el boton */
+}
+
+.btn-white {
+  background-color: #fff;
+  color : #777;
+}
 
 
 

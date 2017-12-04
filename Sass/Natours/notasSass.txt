@@ -42,8 +42,15 @@
     animation-iteration-count: 3;
     animation-timing-function : ease; /* ease in empieza rapido y luego va mas lento */
 
-
   cuando haces animaciones con transform querras agregar esta propiedad a su contenedor
     backface-visibility: hidden;
 
     para evitar un movimiento minusculo pero notable al final de cada animacion. esta propiedad evita ese movimiento
+
+4 clase - empezar con animacion del boton
+
+  border radius tiene un tope, si djeas un valor mas alto que ese queda igual
+  
+  las animaciones se realizan mucho con transform de modo que es una propiedad muy importante
+
+  transition habilita las animaciones hechas con transform
