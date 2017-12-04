@@ -81,6 +81,24 @@
   -Web performance
     usar menos de... HTTP requests, codigo, imagenes
     comprimir codigo e imagenes  
+  
+  * clases teóricas *
 
+2 clase - cambiar de px a rem
+
+  para trabajar en rems, define el valor de 10 px en html
+    con 10px es mas facil pasar a rem todo ya que si quieres decir 50px se transforma a 5rem
+      solo se divide entre 10
+
+  * poner px en html es mala practica *
+    porque es una propiedad que el usuario escoge desde su navegador (puede ser 16px o 18px o 22px segun el usuario quiera)
+      así que es mejor ponerlo a un porcentaje
+        font-size: 62.5%; /* que viene de :  100%*(10/16) */
+
+  pasarlo a em en lugar de rem es mas tedioso ya que necesitas hacer mas calculos
+    porque em depende del font-size del elemento padre
+    rem siempre es del documento root que está en html
+
+  
 
   
