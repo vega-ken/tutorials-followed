@@ -68,3 +68,19 @@
   animation-fill-mode: backwards;
     aplica los estilos del keyfram al 0% antes de empezar la animacion
 
+---- SECCION 2 --- 
+
+1 clase - 3 pilares de buen html y css
+
+  se necesitan 3 cosas para hacer buen html y css
+
+  -Responsive design
+    
+  -Código mantenible y escalable
+    necesita de estructurar bien tus archivos y nombrar bien tus clases
+  -Web performance
+    usar menos de... HTTP requests, codigo, imagenes
+    comprimir codigo e imagenes  
+
+
+  
