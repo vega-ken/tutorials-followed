@@ -138,6 +138,8 @@ body{
 
   border-radius: 100px; /* con un valor alto te aseguras que tiene el maximo radio que pueda tener */
   transition : all .2s; /* habilita las animaciones hechas con transform */
+
+  position: relative; /* referencia para el pseudo element detrás */  
 }
 
 .btn:hover{
@@ -155,7 +157,49 @@ body{
   color : #777;
 }
 
+.btn::after{
+  /* setup : un elemento detras que sea de igual forma */
+  content: "";
+  display : inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
 
+  /* posicionarlo detras del boton - como ::after es child de btn, se pone a este ultimo como relative(referencia) */
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  z-index: -1; /* asegura que el elemento esté detrás del botón original */
+
+  transition: all .4s;
+  
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInUp .5s ease-out .75s; /* name duration timing-function delay*/
+  animation-fill-mode: backwards; /* aplica los estilos del keyfram al 0% antes de empezar la animacion - asi desaparece al boton */
+}
+
+@keyframes moveInUp {
+  0% {
+    opacity : 0;
+    transform : translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 

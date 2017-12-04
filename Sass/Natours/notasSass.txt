@@ -54,3 +54,17 @@
   las animaciones se realizan mucho con transform de modo que es una propiedad muy importante
 
   transition habilita las animaciones hechas con transform
+    *la propiedad de transition se aplica siempre al estado inicial del elemento
+
+5 clase - seguir con la animacion del boton
+
+  ::after
+    resulta ser un elemento hijo del elemento seleccionado
+    en esta clase se usa para poder crear una animación con la propiedad de hover
+
+    siempre tiene un setup, por ejemplo el content siempre debe ser "" o sino no sale
+      como es un hijo del elemento seleccionado, puedes hacer position: absolute y al elemento en sí ponerle position relative
+
+  animation-fill-mode: backwards;
+    aplica los estilos del keyfram al 0% antes de empezar la animacion
+
