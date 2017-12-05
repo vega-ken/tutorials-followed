@@ -150,7 +150,9 @@
       heading-primary--main
       heading-primary--sub
 
+5 clase - sass
   
+  scss es usado en el curso, es más cómodo porque el código css ya hecho es válido en scss(sin embargo no valido en sass)
 
   
 

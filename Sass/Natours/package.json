@@ -1,0 +1,14 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "a project coming from a followed course on udemy for sass and advanced css",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass sass/main.sccs css/style.css"
+  },
+  "author": "Ken Vega",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
