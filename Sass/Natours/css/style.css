@@ -45,18 +45,18 @@ body{
 
 /* logo box a la izquierda arriba */
 
-.logo-box{
+.header__logo-box{
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo{
+.header__logo{
   height: 3.5rem;
 }
 
 /*  text box  - heading y boton - estaran centrados*/
-.text-box{
+.header__text-box{
   position: absolute;
   top : 40%;
   left : 50%;
@@ -75,7 +75,7 @@ body{
   margin-bottom: 6rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
   display :block;
   font-size : 6rem;
   font-weight: 400;
@@ -91,7 +91,7 @@ body{
   */
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
   display :block;
   font-size : 2rem;
   font-weight: 700;
@@ -162,7 +162,7 @@ body{
   box-shadow : 0 .5rem 1rem rgba(0,0,0,0.2); /* da un efecto de reduccion de sombra cuando se presiona el boton */
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color : #777;
 }
@@ -186,7 +186,7 @@ body{
   
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -195,7 +195,7 @@ body{
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInUp .5s ease-out .75s; /* name duration timing-function delay*/
   animation-fill-mode: backwards; /* aplica los estilos del keyfram al 0% antes de empezar la animacion - asi desaparece al boton */
 }

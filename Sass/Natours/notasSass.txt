@@ -4,8 +4,9 @@
 
 1 clase - heading parte 1
 
-  para todo elemento
-    box-sizing: border-box; /* new */
+  box-sizing: border-box;
+    el padding y el border ya no cuentan en el box-model para calcular el total width y total height
+      *tomar en cuenta que si tienes esta propiedad y pones padding, entonces reduces el width interno para donde va el contenido en sí (texto o imagenes) (explicado en 3-19)
 
   para el header
     background-size: cover; /* tratara de hacer fit  */
@@ -98,6 +99,58 @@
   pasarlo a em en lugar de rem es mas tedioso ya que necesitas hacer mas calculos
     porque em depende del font-size del elemento padre
     rem siempre es del documento root que está en html
+
+3 clase - teórica - css architecture
+
+  think - build - architect
+
+  atom design
+
+  BEM - Block Element Modifier
+
+    .block__element--modifier {
+
+    }
+
+    block - por si solos tienen sentido
+    element - relacionados al bloque. por si solos no tienen sentido
+    modifier - crean versiones modificadas del bloque
+
+    BEM hace el codigo mucho mas facil de leer y entender
+
+  metodos para estructurar el css
+    ITCSS method
+    S max method
+    The 7-1 pattern
+      7 carpetas para partials en sass
+        base
+        components
+        layout
+        pages
+        themes
+        abstracts
+        vendors
+      1 archivo sass principal para importar todos los demas en un solo css
+  
+4 clase - poniendo en practica BEM en el HTML hasta ahora avanzado
+
+  logo-box era una clase aplicada al logo de la pagina que se encuentra en el header
+    no es normalmente un estilo que se quiera aplicar a otro elemento en la pagina
+      por eso queda como : header__logo-box
+    
+      lo mismo para logo --> header__logo
+    
+  la misma logica se aplica para text-box --> header__text-box
+
+  pero heading-primary es un bloque que probablemente sí se vuelva a usar en la página más adelante
+    por eso queda como bloque y no como elemento
+
+  heading-primary-main y heading-primary-sub son modificaciones de heading-primary
+    por eso se les agrega un '-' más para indicar que son modifiers
+      heading-primary--main
+      heading-primary--sub
+
+  
 
   
 
