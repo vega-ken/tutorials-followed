@@ -154,6 +154,30 @@
   
   scss es usado en el curso, es más cómodo porque el código css ya hecho es válido en scss(sin embargo no valido en sass)
 
+6 clase - nesting y mixins
+
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  }
+
+  con el nesting se ve mas facil cuando las posiciones son relativas y absolutas (ya sabes a que elemento se refieren mas rapidamente
+
+  los componentes son los elementos independientes 
+    son los resuable building blocks
+    unidos por el layout de la pagina
+  
+  en layout van footer, navbar, etc
+    cosa que van en varias paginas de tu diseño
+
+  en la carpeta de vendor pueden ir 3rd party css
+    como el de bootstrap
+
+  en _base.scss van definiciones para el proyecto entero
+    * , body , html
+
+  en _typography van todas las deficiones que afecten algunos textos
+    incluso los que se ponian en el body
+      *así es mucho más facil buscar en tus archivos qué está afectando qué parte
   
 
   

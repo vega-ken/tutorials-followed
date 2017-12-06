@@ -1,0 +1,20 @@
+/* aqui deben ir resets, estilos para el html y body */
+/* debe ser un partial */
+
+/* basic reset - cada navegador ve lo mismo ahora*/
+*,
+*::after,
+*::before {
+  margin : 0;
+  padding : 0;
+  box-sizing: inherit; /* lo tomara del body */
+}
+  
+html {
+  // esto no va a typography porque es la definicion de lo que 1 rem representa
+  font-size: 62.5%; /* es mejor practica que poner 10px --> (10/16)*100 --> recuerda que 10px era para hacer mas facil la conversion de px a rem */
+}
+
+body{
+  box-sizing: border-box;
+}

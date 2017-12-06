@@ -1,0 +1,63 @@
+.btn{
+  &:link, &:visited {
+    text-transform: uppercase;
+    text-decoration: none; /* quita el subrayado */
+  
+    padding : 1.5rem 4rem;
+    display: inline-block; /* si fuera solo block tomaria todo el espacio disponible en width (como un div) */
+  
+    border-radius: 10rem; /* con un valor alto te aseguras que tiene el maximo radio que pueda tener */
+    transition : all .2s; /* habilita las animaciones hechas con transform */
+  
+    position: relative; /* referencia para el pseudo element detrás */  
+  
+    font-size: 1.6rem;
+  }
+  
+  &:hover{
+    transform: translateY(-3px);
+    box-shadow : 0 1rem 2rem rgba($color-black,0.2); /* offsetX offsetY blur color */
+    &::after{
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  
+  &:active{
+    transform: translateY(-1px);
+    box-shadow : 0 .5rem 1rem rgba($color-black,0.2); /* da un efecto de reduccion de sombra cuando se presiona el boton */
+  }
+  
+  &--white {
+    background-color: $color-white;
+    color : $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  
+  &::after{
+    /* setup : un elemento detras que sea de igual forma */
+    content: "";
+    display : inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+  
+    /* posicionarlo detras del boton - como ::after es child de btn, se pone a este ultimo como relative(referencia) */
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    z-index: -1; /* asegura que el elemento esté detrás del botón original */
+  
+    transition: all .4s;
+    
+  }
+  
+  &--animated {
+    animation: moveInUp .5s ease-out .75s; /* name duration timing-function delay*/
+    animation-fill-mode: backwards; /* aplica los estilos del keyfram al 0% antes de empezar la animacion - asi desaparece al boton */
+  }
+}

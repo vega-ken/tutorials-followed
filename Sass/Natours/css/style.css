@@ -1,96 +1,4 @@
 @charset "UTF-8";
-/* variables */
-/* basic reset - cada navegador ve lo mismo ahora*/
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%;
-  /* es mejor practica que poner 10px */ }
-
-body {
-  font-family: "Lato" , sans-serif;
-  font-weight: 400;
-  /*font-size: 16px;*/
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  /* te permite cortar la imagen desde arriba, centro o abajo */
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* logo box a la izquierda arriba */
-  /*  text box  - heading y boton - estaran centrados*/ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    text-align: center;
-    /* centrar el elemento inline (el boton) */ }
-
-/* heading principal */
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* fix para el movimiento final de la animación */
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /*
-      animation-delay : 3s; 
-      animation-iteration-count: 3;
-    */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /*
-    animation-delay : 3s; 
-    animation-iteration-count: 3;
-  */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out; }
-
 /* animaciones en el header */
 @keyframes moveInLeft {
   0% {
@@ -114,6 +22,68 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+/* animaciones para el boton */
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/* sass entiende que es scss y que es un partial */
+/* aqui deben ir resets, estilos para el html y body */
+/* debe ser un partial */
+/* basic reset - cada navegador ve lo mismo ahora*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* lo tomara del body */ }
+
+html {
+  font-size: 62.5%;
+  /* es mejor practica que poner 10px --> (10/16)*100 --> recuerda que 10px era para hacer mas facil la conversion de px a rem */ }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato" , sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* fix para el movimiento final de la animación */
+  margin-bottom: 6rem;
+  /* heading principal */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*
+      animation-delay : 3s; 
+      animation-iteration-count: 3;
+    */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -170,10 +140,26 @@ body {
   animation-fill-mode: backwards;
   /* aplica los estilos del keyfram al 0% antes de empezar la animacion - asi desaparece al boton */ }
 
-@keyframes moveInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(4rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* te permite cortar la imagen desde arriba, centro o abajo */
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* logo box a la izquierda arriba */
+  /*  text box  - heading y boton - estaran centrados*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center;
+    /* centrar el elemento inline (el boton) */ }
