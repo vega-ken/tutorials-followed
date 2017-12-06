@@ -1,6 +1,4 @@
 # tutorials-followed
-A series of videotutorials that I followed from channels on YouTube (most of them are from Traversy Media).
+A series of Courses and tutorials that I found on Udemy and youtube.
 
-I rewrote the code and add coments on parts that I learned.
-
-Link of the series followed : https://www.youtube.com/watch?v=Wm6CUkswsNw&list=PL1xRhM4Y9kf1y7ho9Ju6Plu3WBtN02DpI
+I rewrote the code and add coments on the parts that I learned.

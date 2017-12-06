@@ -1,215 +1,166 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-
+@charset "UTF-8";
+/* variables */
 /* basic reset - cada navegador ve lo mismo ahora*/
 *,
 *::after,
 *::before {
-  margin : 0;
-  padding : 0;
-  box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; /* es mejor practica que poner 10px */
-}
+  font-size: 62.5%;
+  /* es mejor practica que poner 10px */ }
 
-body{
-  font-family : "Lato" , sans-serif;
+body {
+  font-family: "Lato" , sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  color : #777;
+  color: #777;
   padding: 3rem;
+  box-sizing: border-box; }
 
-  box-sizing: border-box;
-}
-
-.header{
+.header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126,213,111,0.75), rgba(40,180,131,0.75)), url(../img/hero.jpg);
-  background-size: cover; 
-  background-position: top; /* te permite cortar la imagen desde arriba, centro o abajo */
-
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* te permite cortar la imagen desde arriba, centro o abajo */
   position: relative;
-
-  clip-path : polygon(0 0,100% 0,100% 75vh,0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 /* logo box a la izquierda arriba */
-
-.header__logo-box{
+.header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
-.header__logo{
-  height: 3.5rem;
-}
+.header__logo {
+  height: 3.5rem; }
 
 /*  text box  - heading y boton - estaran centrados*/
-.header__text-box{
+.header__text-box {
   position: absolute;
-  top : 40%;
-  left : 50%;
+  top: 40%;
+  left: 50%;
   transform: translate(-40%, -50%);
-
-  text-align: center; /* centrar el elemento inline (el boton) */
-}
+  text-align: center;
+  /* centrar el elemento inline (el boton) */ }
 
 /* heading principal */
-
-.heading-primary{
-  color : #fff;
+.heading-primary {
+  color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
+  /* fix para el movimiento final de la animación */
+  margin-bottom: 6rem; }
 
-  backface-visibility: hidden; /* fix para el movimiento final de la animación */
-  margin-bottom: 6rem;
-}
-
-.heading-primary--main{
-  display :block;
-  font-size : 6rem;
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-
   animation-name: moveInLeft;
-  animation-duration : 1s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
-
   /*
     animation-delay : 3s; 
     animation-iteration-count: 3;
-  */
-}
+  */ }
 
-.heading-primary--sub{
-  display :block;
-  font-size : 2rem;
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
-
-  animation: moveInRight 1s ease-out;
-}
+  animation: moveInRight 1s ease-out; }
 
 /* animaciones en el header */
-
 @keyframes moveInLeft {
   0% {
     /* al inicio se quiere que los elementos sean invisibles */
-    opacity : 0;
-    transform : translateX(-10rem); /* aparecer a la izquierda al empezar */
-  }
-
-  80%{
-    transform : translateX(1rem);
-    /*transform : rotate(120deg); */
-  }
-
+    opacity: 0;
+    transform: translateX(-10rem);
+    /* aparecer a la izquierda al empezar */ }
+  80% {
+    transform: translateX(1rem);
+    /*transform : rotate(120deg); */ }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
-
+    transform: translate(0); } }
 
 @keyframes moveInRight {
   0% {
-    opacity : 0;
-    transform : translateX(10rem);
-  }
-
-  80%{
-    transform : translateX(-1rem);
-  }
-
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
-  text-decoration: none; /* quita el subrayado */
+  text-decoration: none;
+  /* quita el subrayado */
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  /* si fuera solo block tomaria todo el espacio disponible en width (como un div) */
+  border-radius: 10rem;
+  /* con un valor alto te aseguras que tiene el maximo radio que pueda tener */
+  transition: all .2s;
+  /* habilita las animaciones hechas con transform */
+  position: relative;
+  /* referencia para el pseudo element detrás */
+  font-size: 1.6rem; }
 
-  padding : 1.5rem 4rem;
-  display: inline-block; /* si fuera solo block tomaria todo el espacio disponible en width (como un div) */
-
-  border-radius: 10rem; /* con un valor alto te aseguras que tiene el maximo radio que pueda tener */
-  transition : all .2s; /* habilita las animaciones hechas con transform */
-
-  position: relative; /* referencia para el pseudo element detrás */  
-
-  font-size: 1.6rem;
-}
-
-.btn:hover{
+.btn:hover {
   transform: translateY(-3px);
-  box-shadow : 0 1rem 2rem rgba(0,0,0,0.2); /* offsetX offsetY blur color */
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /* offsetX offsetY blur color */ }
 
-.btn:active{
+.btn:active {
   transform: translateY(-1px);
-  box-shadow : 0 .5rem 1rem rgba(0,0,0,0.2); /* da un efecto de reduccion de sombra cuando se presiona el boton */
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /* da un efecto de reduccion de sombra cuando se presiona el boton */ }
 
 .btn--white {
   background-color: #fff;
-  color : #777;
-}
+  color: #777; }
 
-.btn::after{
+.btn::after {
   /* setup : un elemento detras que sea de igual forma */
   content: "";
-  display : inline-block;
+  display: inline-block;
   height: 100%;
   width: 100%;
   border-radius: 10rem;
-
   /* posicionarlo detras del boton - como ::after es child de btn, se pone a este ultimo como relative(referencia) */
   position: absolute;
   top: 0;
   left: 0;
-
-  z-index: -1; /* asegura que el elemento esté detrás del botón original */
-
-  transition: all .4s;
-  
-}
+  z-index: -1;
+  /* asegura que el elemento esté detrás del botón original */
+  transition: all .4s; }
 
 .btn--white::after {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
-.btn:hover::after{
+.btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
 .btn--animated {
-  animation: moveInUp .5s ease-out .75s; /* name duration timing-function delay*/
-  animation-fill-mode: backwards; /* aplica los estilos del keyfram al 0% antes de empezar la animacion - asi desaparece al boton */
-}
+  animation: moveInUp .5s ease-out .75s;
+  /* name duration timing-function delay*/
+  animation-fill-mode: backwards;
+  /* aplica los estilos del keyfram al 0% antes de empezar la animacion - asi desaparece al boton */ }
 
 @keyframes moveInUp {
   0% {
-    opacity : 0;
-    transform : translateY(4rem);
-  }
-
+    opacity: 0;
+    transform: translateY(4rem); }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
+    transform: translateY(0); } }

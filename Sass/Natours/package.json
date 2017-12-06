@@ -4,11 +4,11 @@
   "description": "a project coming from a followed course on udemy for sass and advanced css",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "node-sass sass/main.sccs css/style.css"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Ken Vega",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.5.3"
   }
 }
