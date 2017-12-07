@@ -154,7 +154,7 @@
   
   scss es usado en el curso, es más cómodo porque el código css ya hecho es válido en scss(sin embargo no valido en sass)
 
-6 clase - nesting y mixins
+6 clase - nesting y mixins - organizando el sass con el 7-1 pattern (5-32)
 
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
@@ -179,5 +179,50 @@
     incluso los que se ponian en el body
       *así es mucho más facil buscar en tus archivos qué está afectando qué parte
   
+7 clase - creando un propio grid system
+
+  diferencia entre width y max-width
+    max width
+      si hay suficiente espacio. llena lo que dice
+      si no hay suficiente espacio. llena el 100% de lo que hay
+
+    width es mas estricto, si no hay suficiente se sale de 
+
+  :last-child
+    selecciona a los ultimos elementos hijos del elemento padre
+    si pones #element:last-child
+      no selecciona al ultimo elemento hijo de #element
+      selecciona al ultimo elemento que sea hijo y que tenga el id de element
+
+      no sirve mucho con ids, por eso se usa con clases
+
+      .row:last-child
+        selecciona a los ultimos .row de donde sea que se encuentren (no importa su padre, lo que importa son los ultimos hijos)
+
+  para seleccionar todas las clases que COMIENZAN con "col-" !!! IMPORTANTE
+
+    [class^="col-"] {
+
+    }
+
+    sirve cuando no quieres dejar un elemento con 2 clases como class="col col-1-of-2" (habiendo varios asi)
+      cuando hay otras clases de "col-2-of-3" "col-1-of-4" etc
+      te libras de ponerle una clase extra a todos los elementos
+
+    otras aplicaciones
+      selecionar algunos links en base a su href atribute(hacia donde apuntan)
+      seleccionar los links que abren en nuevas paginas (porque target="_blank")
+
+  si quieres seleccionar todas las que CONTIENEN con "col"
+
+    [class*="col"] {
+
+    }
+
+  si quieres seleccionar todas las que TERMINAN con "col"
+
+    [class$="col"] {
+
+    }
 
   
