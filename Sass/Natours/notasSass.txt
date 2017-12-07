@@ -225,4 +225,20 @@
 
     }
 
+8 clase - main section de natours
+
+  efecto de gradiente en texto
+
+    //importante! : efecto de gradiente en texto
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-ligth, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+
+  utility classes son las que se reusan en el proyecto
+    u-center-text
   
+9 clase - button
+
+  pequeños pixeles no se transforman a rem porque no se modifican tanto en base al
+  default font-size del usuario.
