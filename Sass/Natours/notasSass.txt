@@ -1,6 +1,7 @@
-*{
-  para hacer que todos los browsers lo vean igual
-}
+cosas que aprendi en el curso
+
+  como organizar los files en sass para proyectos grandes de muchas paginas
+
 
 1 clase - heading parte 1
 
@@ -242,3 +243,6 @@
 
   pequeños pixeles no se transforman a rem porque no se modifican tanto en base al
   default font-size del usuario.
+
+10 clase - imagenes en el main content
+
