@@ -3,3 +3,20 @@
   padding: 25rem 0;
   margin-top: -20vh;
 }
+
+.section-features{
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-ligth,0.75), rgba($color-primary-dark,0.75)), url(../img/nat-4.jpg);
+  background-size: cover; 
+
+  //skew the image
+  transform: skewY(-7deg);
+
+  & > * { // el hijo directo de los elementos seleccionados hasta ahora
+    // en este caso, el unico hijo directo es la fila
+    // si fuera & * --> entonces seleccionaria sus hijos pero tambien los hijos de los hijos y así
+    transform : skewY(7deg); // para compensar el skew de la seccion feature
+  }
+
+  margin-top: -10rem; // arreglando el margen dejado por el skew
+}

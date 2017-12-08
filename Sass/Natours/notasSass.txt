@@ -246,3 +246,32 @@ cosas que aprendi en el curso
 
 10 clase - imagenes en el main content
 
+  para que una imagen se agrande mientras que las otras se reduzcan un poco al hacer hover
+  
+    cuando haces hover al elemento padre de las 3, reduce todas
+
+    pero cuando haces hover sobre solo una de ellas agranda esa un poco
+  
+      en el ejemplo las imagenes estaban flotando por "position: absolute" por eso funciona este truco
+
+11 clase - seccion siguiente
+
+  para poder incluir fonts
+
+    descargas el font. luego buscas el css y la carpeta que contenga los archivos de extension woff, ttf, svg, eot
+
+    recuerda que tienes que agregarlo arriba de tu propio css porsiaca así no sobre escribes algun estilo
+
+  * si quieres que un elemento en la columna tenga un efecto de hover, no deberias cambiar al elemento que lleva la clase que le da el grid. sino mas bien deberias crear un div con una nueva clase que tenga esas propiedades de hover.
+    #buenas-practicas
+
+  los icons son fonts que son texto 
+    puedes aplicar font-size, la propiedad para agregarles gradiente, puedes centrarlos como centrarias texto : text-align: center , etc
+
+  nuevo selector : direct childs (los hijos de primera generacion, no las siguientes)
+
+    & > * {
+
+    }
+
+    
